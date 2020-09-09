@@ -39,29 +39,15 @@ const generateHTML = function (teamstr) {
            font-size: x-large;
        }
        .card-header{
-           margin: 10%;
+           margin: 4%;
        }
        .card-body{
-           margin: 10%;
+           margin: 4%;
        }
        
-       .fas fa-glasses mr-2{
-        position:absolute;
-        top:45%;
-        left:45%;
-        color: white;
-        }
-        .fas fa-mug-hot mr-2{
-            position:absolute;
-            top:45%;
-            left:45%;
-            color: white;
-        }
-        .fas fa-user-graduate mr-2{
-            position:absolute;
-            top:45%;
-            left:45%;
-            color: white;
+       .center { 
+        text-align: center; 
+        width: 100%; 
         }
    </style>
    
@@ -80,7 +66,7 @@ const generateHTML = function (teamstr) {
     </body>
     
     </html>`
-
+    
 }
 
 
@@ -89,21 +75,21 @@ const generateCard = function (employee) {
     let roleInfo;
 
     if (employee.title === "Manager") {
-        roleInfo = `Office Number: ${employee.officeNumber} 
-        <div>
-        <i class="fas fa-glasses mr-2" style="align-items: center"></i>
-        </div>`
+        roleInfo = `Office Number: ${employee.officeNumber}`
     } else if (employee.title === "Engineer") {
-        roleInfo = `Github Username: ${employee.github}
-        <div>
-        <i class="fas fa-mug-hot mr-2" style="align-items: center"></i>
-        </div>`
-
+        roleInfo = `Github Username: ${employee.github}`
     } else if (employee.title === "Intern") {
-        roleInfo = `School: ${employee.school} 
-        <div>
-        <i class="fas fa-user-graduate mr-2" style="align-items: center"></i>
-        </div>`
+        roleInfo = `School: ${employee.school}`
+    }
+
+    let roleIcon;
+
+    if (employee.title === "Manager") {
+        roleIcon = `<i class="fas fa-glasses center"></i>`
+    } else if (employee.title === "Engineer") {
+        roleIcon = `<i class="fas fa-mug-hot center"></i>`
+    } else if (employee.title === "Intern") {
+        roleIcon = `<i class="fas fa-user-graduate center"></i>`
     }
 
     
@@ -111,16 +97,17 @@ const generateCard = function (employee) {
     return `<div class="card">
     <div class="card-header">
     <h2>${employee.name}</h2>  
-    <h2>${employee.title}</h2>
-    <hr>
+    <h2 class="center">${roleIcon}${employee.title}</h2>
+   <hr>
 </div>
 <div class="card-body">
     <ul>
         <li>ID: ${employee.id}</li>
         <li>Email: ${employee.email}</li>
-    </ul>
+        <li>${roleInfo}</li>
+        </ul>
 
-    <p>${roleInfo}</p>
+    
 </div>
 </div>`
 }
