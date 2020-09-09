@@ -8,7 +8,7 @@
 This is a software engineering team generator command-line application. 
 The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. As part of this project was also to build class constructors that pass the Test that we where presented.
 
-![image (8)](https://user-images.githubusercontent.com/65316520/92629056-bba18980-f29b-11ea-9485-a249355788be.png)
+![image (9)](https://user-images.githubusercontent.com/65316520/92631307-2accad00-f29f-11ea-9edc-24939e1bf985.png)
 
 ## Table of contents
 - [Description](#Description)
