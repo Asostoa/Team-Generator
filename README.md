@@ -8,7 +8,7 @@
 This is a software engineering team generator command-line application. 
 The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. As part of this project was also to build class constructors that pass the Test that we where presented.
 
-![ScreenShot](./assets/screenshot.png)
+![image (7)](https://user-images.githubusercontent.com/65316520/92616444-382c6c00-f28c-11ea-97a9-4b7409e811dd.png)
 
 ## Table of contents
 - [Description](#Description)
@@ -36,8 +36,8 @@ app.js         // Runs the application
 
 ```
 ## Usage
-![Test](./assets/test.gif)
-![Test](./assets/node.gif)
+![test](https://user-images.githubusercontent.com/65316520/92616260-02878300-f28c-11ea-897c-e582b70c491e.gif)
+![node](https://user-images.githubusercontent.com/65316520/92616389-28ad2300-f28c-11ea-90e3-88a03cfca404.gif)
 ## License
 ![Badge](https://img.shields.io/github/license/asostoa/Team-Generator)
 ## Repository
