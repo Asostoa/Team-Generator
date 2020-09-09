@@ -12,7 +12,7 @@ class Engineer extends Employee {
         return this.github;
     }
     
-    //Engineer now has access to Employee methods
+   
 
 }
 

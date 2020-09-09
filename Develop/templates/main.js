@@ -85,7 +85,7 @@ const generateHTML = function (teamstr) {
 
 
 const generateCard = function (employee) {
-    //if else statement
+   
     let roleInfo;
 
     if (employee.title === "Manager") {
@@ -117,7 +117,7 @@ const generateCard = function (employee) {
         <li>ID: ${employee.id}</li>
         <li>Email: ${employee.email}</li>
     </ul>
-    
+
     <p>${roleInfo}</p>
 </div>
 </div>`

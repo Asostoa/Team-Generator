@@ -14,7 +14,7 @@ let teamstr = ``;
 
 async function prompt() {
      let responseDone = "";
-     // prompt to collect input and use do while atleast one and do it number of times depending on the while condition
+    
      do {
           try {
                response = await inquirer.prompt([
@@ -47,7 +47,7 @@ async function prompt() {
                ]);
 
                let response2 = ""
-               // if else statement
+              
 
                if (response.role === "Engineer") {
                     response2 = await inquirer.prompt([{
@@ -55,18 +55,18 @@ async function prompt() {
                          name: "x",
                          message: "What is the employee's github username?:",
                     }, ]);
-                    //store the object and push
+                    
                     const engineer = new Engineer(response.name, response.id, response.email, response2.x);
                     teamArray.push(engineer);
                } else if (response.role === "Intern") {
                     response2 = await inquirer.prompt([{
                          type: "input",
 
-                         //the x is to only store into the team array
+                         
                          name: "x",
                          message: "What school is the employee attending?:",
                     }, ]);
-                    //store the object and push
+                    
                     const intern = new Intern(response.name, response.id, response.email, response2.x);
                     teamArray.push(intern);
                } else if (response.role === "Manager") {
@@ -75,7 +75,7 @@ async function prompt() {
                          name: "x",
                          message: "What is the employee's office number?:",
                     }, ]);
-                    //store the object and push
+                    
                     const manager = new Manager(response.name, response.id, response.email, response2.x);
                     teamArray.push(manager);
                }
@@ -83,8 +83,7 @@ async function prompt() {
                return console.log(err);
           }
           console.log(teamArray)
-          //need to prompt do you want to continue
-
+          
           responseDone = await inquirer.prompt([{
                type: "list",
                name: "finish",
@@ -95,8 +94,7 @@ async function prompt() {
                ]
           }, ]);
 
-          // console.log(responseDone.choices);
-          //the while parameter is saying continue running the code if the user selects "yes"
+          
      } while (responseDone.finish === "Yes");
 }
 
@@ -104,10 +102,10 @@ async function prompt() {
 async function main() {
      try {
           await prompt()
-          // for i to teamArray.length  => 
+          
 
           for (let i = 0; i < teamArray.length; i++) {
-               //template literal=``
+              
                teamstr = teamstr + html.generateCard(teamArray[i]);
           }
 
@@ -115,9 +113,6 @@ async function main() {
 
           console.log(teamstr)
 
-          //call generate function to generate the html template literal
-
-          //write file 
           writeFileAsync("./output/index.html", finalHTML)
 
 
@@ -130,6 +125,6 @@ async function main() {
 
 
 
-//call function to run application on the server
+
 main();
 
