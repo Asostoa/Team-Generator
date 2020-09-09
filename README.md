@@ -44,5 +44,5 @@ app.js         // Runs the application
 ![Badge](https://img.shields.io/github/license/asostoa/Team-Generator)
 ## Repository
 - [Project Repo](https://asostoa.github.io/Team-Generator/.)
-##GitHub 
+## GitHub 
 - [GitHub Profile](https://github.com/Asostoa)
