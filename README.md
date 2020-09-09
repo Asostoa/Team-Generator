@@ -36,7 +36,9 @@ app.js         // Runs the application
 
 ```
 ## Usage
+### Test
 ![test](https://user-images.githubusercontent.com/65316520/92616260-02878300-f28c-11ea-897c-e582b70c491e.gif)
+### Node CLI
 ![node](https://user-images.githubusercontent.com/65316520/92616389-28ad2300-f28c-11ea-90e3-88a03cfca404.gif)
 ## License
 ![Badge](https://img.shields.io/github/license/asostoa/Team-Generator)
