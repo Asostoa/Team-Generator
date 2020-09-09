@@ -52,31 +52,29 @@ async function prompt() {
                if (response.role === "Engineer") {
                     response2 = await inquirer.prompt([{
                          type: "input",
-                         name: "x",
+                         name: "github",
                          message: "What is the employee's github username?:",
                     }, ]);
                     
-                    const engineer = new Engineer(response.name, response.id, response.email, response2.x);
+                    const engineer = new Engineer(response.name, response.id, response.email, response2.github);
                     teamArray.push(engineer);
                } else if (response.role === "Intern") {
                     response2 = await inquirer.prompt([{
                          type: "input",
-
-                         
-                         name: "x",
+                         name: "school",
                          message: "What school is the employee attending?:",
                     }, ]);
                     
-                    const intern = new Intern(response.name, response.id, response.email, response2.x);
+                    const intern = new Intern(response.name, response.id, response.email, response2.school);
                     teamArray.push(intern);
                } else if (response.role === "Manager") {
                     response2 = await inquirer.prompt([{
                          type: "input",
-                         name: "x",
+                         name: "officeNumber",
                          message: "What is the employee's office number?:",
                     }, ]);
                     
-                    const manager = new Manager(response.name, response.id, response.email, response2.x);
+                    const manager = new Manager(response.name, response.id, response.email, response2.officeNumber);
                     teamArray.push(manager);
                }
           } catch (err) {
@@ -87,7 +85,7 @@ async function prompt() {
           responseDone = await inquirer.prompt([{
                type: "list",
                name: "finish",
-               message: "Do you want to continue?: ",
+               message: "Do you want to add another?: ",
                choices: [
                     "Yes",
                     "No"
