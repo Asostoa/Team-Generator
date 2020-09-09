@@ -106,6 +106,8 @@ const generateCard = function (employee) {
         </div>`
     }
 
+    
+
     return `<div class="card">
     <div class="card-header">
     <h2>${employee.name}</h2>  
